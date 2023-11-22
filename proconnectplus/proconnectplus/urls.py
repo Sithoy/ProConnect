@@ -23,5 +23,6 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('', views.landing_page, name='landing_page'),
     path('blog/', include('blog.urls')),
+    path('jobs/', include('jobs.urls')),
 
 ]
