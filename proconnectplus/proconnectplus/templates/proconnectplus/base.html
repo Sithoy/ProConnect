@@ -21,7 +21,7 @@
                     </ul>
                     <ul class="nav">                     
                         {% if user.is_authenticated %}
-                            <li>Hello, {{ user.username }}.<li\>
+                            <li><a href="/" class="nav-link link-body-emphasis px-2">Hello, {{ user.username }}.</a></li>
                             <li class="nav-item"><a href="{% url 'accounts:logout' %}" class="nav-link link-body-emphasis px-2">Logout</a></li>
                             <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">My Profile</a></li>
                         {% else %}
@@ -38,8 +38,8 @@
                         <svg class="bi me-2" width="40" height="32">
                             <use xlink:href="#bootstrap"></use>
                         </svg>
-                        <span class="fs-4"><img src="{% static 'proconnectplus/images/ProConnectPlus.png' %}" alt="Logo"> </span>
-                    </a>
+                        <span class="fs-4"><img src="{{ MEDIA_URL }}images/logo.png" height="55px" alt="Website Logo"></span>
+                    </a>                    
                     <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
                         <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
                     </form>
