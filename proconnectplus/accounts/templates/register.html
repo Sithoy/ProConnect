@@ -3,6 +3,10 @@
 {% block title %}Registration Page{% endblock %}
 
 {% block content %}
-    <h1>Welcome to ProConnectPlus</h1>
-    <!-- Additional homepage content -->
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
 {% endblock %}
