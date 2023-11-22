@@ -24,5 +24,6 @@ urlpatterns = [
     path('', views.landing_page, name='landing_page'),
     path('blog/', include('blog.urls')),
     path('jobs/', include('jobs.urls')),
+    path('events/', include('events.urls')),
 
 ]

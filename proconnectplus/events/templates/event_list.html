@@ -1,0 +1,15 @@
+<!-- events/templates/events/event_list.html -->
+
+{% extends "proconnectplus/base.html" %}
+
+{% block content %}
+  <h1>Upcoming Events</h1>
+  {% for event in events %}
+    <div>
+      <h2>{{ event.title }}</h2>
+      <p>{{ event.description }}</p>
+      <p>Location: {{ event.location }}</p>
+      <p>Date: {{ event.date }} Time: {{ event.time }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
