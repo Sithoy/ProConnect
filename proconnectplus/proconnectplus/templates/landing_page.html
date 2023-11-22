@@ -1,0 +1,14 @@
+{% extends "proconnectplus/base.html" %}
+
+{% block content %}
+<h1>Welcome to ProConnectPlus</h1>
+<p>Connect with professionals around the world.</p>
+{% if not request.user.is_authenticated %}
+  <h1>UnRegistered User</h1>
+  {% comment %} <a href="{% url 'accounts:login' %}">Login</a> |
+  <a href="{% url 'accounts:register' %}">Register</a> {% endcomment %}
+{% else %}
+  <h1>Registered User</h1>
+  {% comment %} <a href="{% url 'some_authenticated_view' %}">View Dashboard</a> {% endcomment %}
+{% endif %}
+{% endblock %}

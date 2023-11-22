@@ -19,17 +19,17 @@
                         <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">FAQs</a></li>
                         <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About</a></li>
                     </ul>
-                    {% comment %} <ul class="nav">                     
+                    <ul class="nav">                     
                         {% if user.is_authenticated %}
                             Hello, {{ user.username }}.
-                            <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link link-body-emphasis px-2">Sign Out</a></li>
-                            <li class="nav-item"><a href="{% url 'view_profile' %}" class="nav-link link-body-emphasis px-2">View Profile</a></li>
+                            <li class="nav-item"><a href="{% url 'accounts:logout' %}" class="nav-link link-body-emphasis px-2">Logout</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">My Profile</a></li>
                         {% else %}
-                            <li class="nav-item"><a href="{% url 'register_user' %}" class="nav-link link-body-emphasis px-2">Register</a></li>            
-                            <li class="nav-item"><a href="{% url 'create_profile' %}" class="nav-link link-body-emphasis px-2">Create Profile</a></li>
-                            <li class="nav-item"><a href="{% url 'login' %}" class="nav-link link-body-emphasis px-2">Login</a></li>
+                            <li class="nav-item"><a href="{% url 'accounts:register' %}" class="nav-link link-body-emphasis px-2">Register</a></li>            
+                            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Create Profile</a></li>
+                            <li class="nav-item"><a href="{% url 'accounts:login' %}" class="nav-link link-body-emphasis px-2">Login</a></li>
                         {% endif %}                    
-                    </ul> {% endcomment %}
+                    </ul> 
                 </div>
             </nav>
             <header class="py-3 mb-4 border-bottom">
