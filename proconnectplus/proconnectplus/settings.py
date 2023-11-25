@@ -82,15 +82,10 @@ WSGI_APPLICATION = 'proconnectplus.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'proconnectplus',
-        'USER': 'root',
-        'PASSWORD': 'Sh1r@51703',
-        'HOST': 'localhost',   # Set to external IP if not local
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
