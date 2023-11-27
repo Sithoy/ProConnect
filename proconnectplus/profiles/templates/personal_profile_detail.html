@@ -1,0 +1,15 @@
+{% extends 'proconnectplus/base.html' %}
+{% block content %}
+  <h2>{{ user.username }}'s Personal Profile</h2>
+  <div>
+    <p><strong>First Name:</strong> {{ personal_profile.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ personal_profile.last_name }}</p>
+    <p><strong>Contact:</strong> {{ personal_profile.contact }}</p>
+    <p><strong>Bio:</strong> {{ personal_profile.bio }}</p>
+    <p><strong>Skills:</strong> {{ personal_profile.skills }}</p>
+    <!-- Add other fields as needed -->
+    {% if personal_profile.profile_picture %}
+      <img src="{{ personal_profile.profile_picture.url }}" alt="Profile Picture">
+    {% endif %}
+  </div>
+{% endblock %}
